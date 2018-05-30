@@ -1,0 +1,61 @@
+
+server:
+  port: 80 # 服务器默认端口做网关使用
+  context-path: /
+  
+spring:
+  application:
+    name: bailuying-zuul-service
+
+eureka:
+  client:  
+    service-url:
+      defaultZone: http://www.bailuyiting.com:18650810243@localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+
+
+zuul:
+  routes:
+       bailuyiting-sso-service:
+        path: /sso/**
+        service-id: bailuyiting-sso-service
+
+       bailuyiting-sideParking-service:
+        path: /sideParking/**
+        service-id: bailuyiting-sideParking-service
+
+       bailuyiting-communityParking-service:
+        path: /communityParking/**
+        service-id: bailuyiting-communityParking-service
+
+       bailuyiting-publishParking-service:
+        path: /publishParking/**
+        service-id: bailuyiting-publishParking-service
+
+# use for text
+hystrix:
+   command:
+     default:
+        execution:
+           timeout:
+             enabled: false
+
+
+# use for text
+ribbon:
+  ReadTimeout: 1000000
+  ConnectTimeout: 1000000
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 1
+  eureka:
+    enabled: true
+     
+    
+
+
+
+
+
+ 

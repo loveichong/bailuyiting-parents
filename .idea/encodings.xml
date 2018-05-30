@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/commons" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/commons/commons-core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/commons/commons-untils" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/communityparking" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/communityparking/communityparking-inter" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/communityparking/communityparking-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config/config-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka/eureka-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/module" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/module/module-sms" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/module/module-wechat" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/publicparking" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/publicparking/publicparking-inter" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/publicparking/publicparking-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sideparking" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sideparking/sideparking-inter" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sideparking/sideparking-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sso" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sso/sso-inter" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sso/sso-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zuul" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zuul/zuul-service" charset="UTF-8" />
+  </component>
+</project>

@@ -1,0 +1,81 @@
+
+server:
+  port: 8888
+  tomcat:
+    uri-encoding: UTF-8
+  undertow:
+    accesslog:
+      dir: ./logs
+      enabled: false
+      pattern: common
+      prefix: access_log
+      rotate: true
+      suffix: log
+
+logging:
+  config: classpath:logback.xml
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://www.bailuyiting.com:18650810243@localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+
+#spring:
+#  application:
+#    name: bailuyiting-config-service
+#  profiles:
+#    active: native
+#  cloud:
+#    config:
+#      server:
+#        git:
+#          uri: file:///D:/config
+#          search-paths:
+#          username:
+#          password:
+#        native:
+#          search-locations: file:///D:/config
+#      label:
+spring:
+  application:
+    name: bailuyiting-config-service
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/loveichong/bailuyiting.git
+          username: 761739540@qq.com
+          password: 950512sqy901121
+      label:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+     
+    
+
+
+
+    
+ 

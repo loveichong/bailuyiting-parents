@@ -1,0 +1,33 @@
+server:
+  port: 8761
+  context-path: /
+
+spring:
+  application:
+    name: www.bailuyiting.com.eureka.service
+ 
+security:
+  basic:
+    enabled: true
+  user:
+    name: www.bailuyiting.com
+    password: 18650810243
+
+eureka:
+  client:  
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://www.bailuyiting.com:18650810243@localhost:8761/eureka/
+    healthcheck:
+      enabled: true     
+  instance:
+    prefer-ip-address: true  
+  //server:
+   //     enableSelfPreservation: false
+   //     evictionIntervalTimerInMs: 10000
+    
+   
+    
+
+ 

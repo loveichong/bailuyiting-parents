@@ -1,0 +1,39 @@
+
+server:
+  port: 8090
+
+spring:
+  application:
+    name: bailuyiting-sso-service
+  cloud:
+    config:
+      name: bailuyiting
+      profile: properties
+      discovery:
+        service-id: bailuyiting-config-service
+        enabled: true
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+     
+    
+
+
+
+    
+ 

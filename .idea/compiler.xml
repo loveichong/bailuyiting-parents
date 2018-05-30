@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="commons-core" />
+        <module name="commons-untils" />
+        <module name="communityparking-inter" />
+        <module name="communityparking-service" />
+        <module name="config-service" />
+        <module name="eureka-service" />
+        <module name="module-sms" />
+        <module name="module-wechat" />
+        <module name="publicparking-inter" />
+        <module name="publicparking-service" />
+        <module name="sideparking-inter" />
+        <module name="sideparking-service" />
+        <module name="sms" />
+        <module name="sso-inter" />
+        <module name="sso-service" />
+        <module name="zuul-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="sidepaking-inter" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

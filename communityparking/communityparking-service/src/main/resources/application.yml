@@ -1,0 +1,36 @@
+
+server:
+  port: 8093
+
+spring:
+  application:
+    name: bailuyiting-communityParking-service
+  cloud:
+    config:
+      name: bailuyiting
+      profile: properties
+      discovery:
+        service-id: bailuyiting-config-service
+        enabled: true
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+     
+    
+
+
+
+    
+ 

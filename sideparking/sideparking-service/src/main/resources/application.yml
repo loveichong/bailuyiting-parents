@@ -1,0 +1,83 @@
+
+server:
+  port: 8092
+  tomcat:
+    uri-encoding: UTF-8
+  undertow:
+    accesslog:
+      dir: ./logs
+      enabled: false
+      pattern: common
+      prefix: access_log
+      rotate: true
+      suffix: log
+
+logging:
+  config: classpath:logback.xml
+
+spring:
+  application:
+    name: bailuyiting-sideParking-service
+#  redis:
+#    host: www.loveichong.com
+#    port: 6379
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/text?useUnicode=true&characterEncoding=gbk&zeroDateTimeBehavior=convertToNull&useSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 18650810243 
+    platform: mysql
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    filters: stat,wall,log4j
+    logSlowSql: true
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQLDialect
+    open-in-view: true
+  http:
+    encoding:
+      charset: UTF-8
+      force: true
+      enabled: true
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://www.bailuyiting.com:18650810243@localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+     
+    
+
+
+
+    
+ 
