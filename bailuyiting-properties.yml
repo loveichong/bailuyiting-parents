@@ -1,6 +1,5 @@
 
 server:
-  port: 8092
   tomcat:
     uri-encoding: UTF-8
   undertow:
@@ -15,9 +14,15 @@ server:
 logging:
   config: classpath:logback.xml
 
+eureka:
+  client:
+    service-url:
+      defaultZone: http://www.bailuyiting.com:18650810243@47.106.177.107:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+
 spring:
-  application:
-    name: bailuyiting-sideParking-service
 #  redis:
 #    host: www.loveichong.com
 #    port: 6379
@@ -41,9 +46,6 @@ spring:
     filters: stat,wall,log4j
     logSlowSql: true
   jpa:
-    show-sql: true
-    hibernate:
-      ddl-auto: update
     database-platform: org.hibernate.dialect.MySQLDialect
     open-in-view: true
   http:
@@ -52,14 +54,17 @@ spring:
       force: true
       enabled: true
 
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://www.bailuyiting.com:18650810243@localhost:8761/eureka/
-  instance:
-    prefer-ip-address: true
-    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+      
+##################################################自定义配置###############################################
+module:
+    weChat:
+          pay:
+            mchID: 1499410362
+            key: baiLUTingChe1581AQWE1917plmokATY
+            appID: wx24151ca066138e3f
+            appSecret: 735dea3575a1b49676447596f815f393
+            spBillCreateIp: 192.168.1.113
+            notifyIp: http://47.106.177.107/sso
 
 
 
