@@ -12,6 +12,7 @@ spring:
       discovery:
         service-id: bailuyiting-config-service
         enabled: true
+#      uri: http://47.106.177.107:8888
 
 
 
